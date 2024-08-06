@@ -1,6 +1,6 @@
 import { ReaderNavbar } from "../../readerComponents/ReaderNavbar/ReaderNavbar";
 import styles from "./BookDetails.module.css";
-import BookPdfExample from "../../../booksPdfs/GYM Management System.pdf";
+import BookPdfExample from "../../../booksPdfs/GYM Management .pdf";
 import StarRatings from "react-star-ratings";
 import { useContext, useState } from "react";
 import { RiEmotionUnhappyLine } from "react-icons/ri";
