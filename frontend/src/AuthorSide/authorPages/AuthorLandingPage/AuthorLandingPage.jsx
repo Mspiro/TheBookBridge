@@ -11,7 +11,6 @@ import { MyContext } from "../../../context/MyContext";
 import ReactLoading from "react-loading";
 
 export const AuthorLandingPage = () => {
-  // const [authorData, setAuthorData] = useState({});
   const { authorLogin } = useContext(MyContext);
   const [books, setBooks] = useState([]);
   const [book, setBook] = useState({});
@@ -28,9 +27,8 @@ export const AuthorLandingPage = () => {
   const [updateStatus, setUpdateStatus] = useState(
     searchParams.get("updateStatus") || "published"
   );
-  const [authorId, _] = useState(
-    searchParams.get("author") || authorLogin.authorId
-  );
+  const authorId= searchParams.get("author") || authorLogin.authorId;
+  
   const [isAddLoadding, setAddIsLoadding] = useState(false);
   const [isUpdateLoadding, setUpdateIsLoadding] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -260,7 +258,6 @@ export const AuthorLandingPage = () => {
   };
 
   useEffect(() => {
-    // setAuthorData(JSON.parse(localStorage.getItem("author")));
     setSearchParams({
       author: authorLogin?.authorId,
       updateStatus,
@@ -268,6 +265,7 @@ export const AuthorLandingPage = () => {
       pageLimit,
     });
     handleGetBooks();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [updateStatus, page, pageLimit]);
 
   console.log(books);

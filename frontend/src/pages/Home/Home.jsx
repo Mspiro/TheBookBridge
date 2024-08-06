@@ -106,6 +106,8 @@ export const Home = () => {
     // Extract unique genres
     const genresSet = new Set(booksForSearch.map((book) => book.genre));
     setUniqueGenre([...genresSet]);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [books]);
 
   useEffect(() => {
@@ -115,6 +117,8 @@ export const Home = () => {
       pageLimit,
       sortOrder,
     });
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pageLimit, page, sortOrder]);
 
   // console.log(sliderValue);

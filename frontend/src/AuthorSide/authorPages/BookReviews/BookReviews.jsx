@@ -71,6 +71,7 @@ export const BooksReviews = () => {
 
   useEffect(() => {
     handleGetReviews();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[authorLogin]);
 
   // console.log(reviews);
